@@ -1,3 +1,6 @@
+
+require 'spec_helper'
+
 def get_int_values
   [gets, gets].map{ |s| s.chomp.to_i }
 end
