@@ -1,4 +1,4 @@
-require 'calculator.rb'
+require 'rspec ./spec/spec_helper.rb/calculator.rb'
 
 describe "#addition" do 
   it "adds two numbers together" do
