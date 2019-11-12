@@ -1,4 +1,4 @@
-describe 
+describe calculator.rb do
 
 describe "#addition" do 
   it "adds two numbers together" do
