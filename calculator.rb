@@ -1,27 +1,37 @@
-
 require 'spec_helper'
 
-def get_int_values
-  [gets, gets].map{ |s| s.chomp.to_i }
+describe "#addition" do 
+  it "adds two numbers together" do
+    expect(addition(5,4)).to eq(9)
+  end
 end
 
-puts "Would you like to [add], [multiply], or [subtract]?"
-response = gets.chomp
-
-case response.downcase
-when 'add'
-  puts "Which numbers would you like to add?"
-  operator = :+
-
-when 'subtract'
-  puts "Which numbers would you like to subtract?"
-  operator = :-
-
-when 'multiply'
-  puts "Which numbers would you like to multiply?"
-  operator = :*
-
+describe "#subtraction" do
+  it "subtracts two numbers from each other" do
+    expect(subtraction(10,5)).to eq(5)
+  end
 end
 
-answer = get_int_values.inject(operator)
-puts "The answer is... #{ answer }"
+describe "#division" do
+  it "divides one number by another" do
+    expect(division(50,2)).to eq(25)
+  end
+end
+
+describe "#multiplication" do
+  it "multiplies two numbers together" do
+    expect(multiplication(4,30)).to eq(120)
+  end
+end
+
+describe "#modulo" do
+  it "returns the remainder of two numbers" do
+    expect(modulo(34, 5)).to eq(4)
+  end
+end
+
+describe "#square_root" do
+  it "returns the square root of a number" do
+    expect(square_root(81)).to eq(9)
+  end
+end
